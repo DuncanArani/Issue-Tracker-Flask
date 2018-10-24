@@ -14,16 +14,19 @@
             <li><a href="#">Open</a></li>
             <li><a href="#">Progress</a></li>
             <li><a href="#">Closed</a></li>
+           <li><a href ="#"class="w3-button w3-red" onclick="document.getElementById('id01').style.display='block'">Create Ticket</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
-
+              <li><a href="{{url_for('auth.login')}}" style="color:white; font-weight:bolder;">Sign out</a></li>
         </ul>
     </div>
 </nav>
 <div class="container" style="background-color:powderblue;">
 
-    <!-- <button class=""><a href="/tickets">create tickets</a></button> -->
+     
+    <div id="id01" class="w3-panel w3-green w3-display-container" style="display:none">
+     <span onclick="this.parentElement.style.display='none'"
+  class="w3-button w3-red w3-display-topright">x</span>
     <div class="card">
         <div class="card-block">
 
@@ -31,6 +34,7 @@
     </div>
 
     {{wtf.quick_form(form)}}
+
 </div>
 
 </div>

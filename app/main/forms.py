@@ -5,5 +5,5 @@ from wtforms.validators import Required
 class TicketsForm(FlaskForm):
     title = TextAreaField(' title',validators = [Required()])
     description = TextAreaField(' discription',validators = [Required()])
-    submit = SubmitField('Create Tickets')
+    submit = SubmitField('submit')
 
