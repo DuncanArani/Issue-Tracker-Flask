@@ -1,0 +1,34 @@
+{% macro displayTickets(tickets_list)%}
+    {% for ticket in tickets_list %}
+    <tr>
+        <th>{{ticket.id}}</th>
+        <td>{{ticket.ticket_title}}</td>
+        <td>{{ticket.ticket.username}}</td>
+        <td>{{ticket.assigned_to}}</td>
+      </tr>
+    {% endfor %}
+{% endmacro %}
+
+
+{% macro displayAllTickets(tickets)%}
+    {% for ticket in tickets %}
+    <tr>
+        <td><a href="#">{{ticket.id}}</a></td>
+        <td>{{ticket.ticket_title}}</td>
+        <td>{{ticket.severity}}</td>
+        <td>{{ticket.ticket.username}}</td>
+        <td>{{ticket.assigned_to}}</td>
+        <td>{{ticket.status}}</td>
+      </tr>
+    {% endfor %}
+{% endmacro %}
+
+{% macro displayUsers(users_list) %}
+    {% for user in users_list %}
+    <tr>
+        <td><a href="{{url_for('main.update_user', id=user.id)}}">{{user.id}}</a></td>
+        <td>{{user.username}}</td>
+        <td>{{user.role}}</td>
+      </tr>
+    {% endfor %}
+{% endmacro %}
