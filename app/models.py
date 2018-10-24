@@ -54,3 +54,7 @@ class Ticket(db.Model):
     ticket_title = db.Column(db.String(255))
     ticket_description = db.Column(db.String(255))
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+
+    def save_ticket(self):
+        db.session.add(self)
+        db.session.commit()

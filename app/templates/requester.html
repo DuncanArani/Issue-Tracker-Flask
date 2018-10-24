@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{%block content%}
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Requester</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Open</a></li>
+            <li><a href="#">Progress</a></li>
+            <li><a href="#">Closed</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+
+        </ul>
+    </div>
+</nav>
+<div class="container" style="background-color:powderblue;">
+
+    <!-- <button class=""><a href="/tickets">create tickets</a></button> -->
+    <div class="card">
+        <div class="card-block">
+
+        </div>
+    </div>
+
+    {{wtf.quick_form(form)}}
+</div>
+
+</div>
+</div>
+</div>
+{%endblock%}
