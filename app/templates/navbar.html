@@ -28,16 +28,16 @@
         <div class="collapse navbar-collapse" id="navbar1">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="/requester" class="nav-link">Dashboard</a>
+              <a href="/admin" class="nav-link">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a href="{{url_for('main.tickets')}}" class="nav-link">Tickets</a>
+              <a href="{{url_for('main.ticket')}}" class="nav-link">Tickets</a>
             </li>
             <li class="nav-item">
-              <a href="{{url_for('main.users')}}" class="nav-link">Users</a>
+              <a href="{{url_for('main.admin')}}" class="nav-link">Admin</a>
             </li>
             <li class="nav-item">
-              <a href="{{url_for('auth.logout')}}" class="nav-link">Logout</a>
+              <a href="{{url_for('auth.login')}}" class="nav-link">Logout</a>
             </li>
           </ul>
         </div>

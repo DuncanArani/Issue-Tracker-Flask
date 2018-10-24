@@ -5,28 +5,33 @@
 </head>
 
 <body>
-    {%for ticket in tickets%}
-    <div class="panel">
-    <div class= "row">
+  {%for ticket in tickets%}
+  <div class="panel">
+    <div class="row">
       <div class="col-md-4">
-  <div class="card" style="width: 400px;">
-    <img class="card-img-top" src="static/image/img.jpeg" alt="Card image cap">
-    <div class="card-body">
+        <div class="card" style="width: 400px;">
+          <img class="card-img-top" src="static/image/img.jpeg" alt="Card image cap">
+          <div class="card-body">
 
             <h1 class="card-title">title{{ticket.ticket_title}}.</h1>
             <p class="card-text">Description{{ticket.ticket_description}}.</p>
-            
+
             <a href="#"><button type="button" class="btn btn-success">REQUEST</button></a>
-          
+
           </div>
-          </div>
-          </div>
-          
         </div>
       </div>
+      <div class="col-md-4">
+      </div>
 
-      {%endfor%}
+      <div class="col-md-4">
+
+      </div>
     </div>
+  </div>
+
+  {%endfor%}
+  </div>
   </div>
   </div>
 </body>
